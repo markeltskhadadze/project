@@ -1,0 +1,224 @@
+body {
+  background: url(./img/background-body.jpg) no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #32445559;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.button {
+  background: #e5a228;
+  border-radius: 5px;
+}
+
+.h1-title {
+  margin-top: 100px;
+}
+
+.h2-title {
+  text-align: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  background: #000000ab;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  padding-top: 55px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  animation-name: animate;
+  animation-duration: 0.5s;
+  background-color: #e5a228;
+  border-radius: 10px;
+  width: 250px;
+  height: 485px;
+}
+
+@keyframes animate {
+  from {
+    top: -320px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-modal {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 230px;
+}
+
+.close-modal:hover {
+  color: #ffffff;
+}
+
+.errors {
+  display: none;
+  font-size: 10px;
+  color: red;
+}
+
+.btn-submit {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modalwin-signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  background: #000000ab;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  padding-top: 55px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-signIn {
+  animation-name: animate;
+  animation-duration: 0.5s;
+  background-color: #e5a228;
+  border-radius: 10px;
+  width: 250px;
+  height: 330px;
+}
+
+@keyframes animate {
+  from {
+    top: -320px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-form-signIn {
+  text-align: center;
+}
+
+.close-modal {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 230px;
+}
+
+.close-modal:hover {
+  color: #ffffff;
+}
+
+.btn-submit-signI {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.input-field {
+  outline: none;
+  border: 1px solid grey;
+}
+
+.input-error {
+  border-color: rgb(207, 17, 17);
+}
+
+.thanks-authorization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  background: #000000ab;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  padding-top: 55px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.thanks-modal-content {
+  animation-name: animate;
+  animation-duration: 0.5s;
+  background-color: #e5a228;
+  border-radius: 10px;
+  width: 200px;
+  height: 100px;
+}
+
+@keyframes animate {
+  from {
+    top: -320px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.thanks-modal-content p {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 10px;
+  color: red;
+  display: block;
+  visibility: hidden;
+}
+
+.error-message--visible {
+  visibility: visible;
+}
+
+.photo {
+  border: 1px solid grey;
+  border-radius: 50%;
+  background-color: #808080b5;
+  width: 100px;
+  height: 100px;
+}
+
+.upload {
+  display: none;
+}

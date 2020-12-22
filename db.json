@@ -1,0 +1,19 @@
+{
+  "user": [
+    {
+      "login": "Mark",
+      "password": "71dutiba",
+      "id": 1
+    },
+    {
+      "login": "markel.tskhadadze@yandex.ua",
+      "password": "66546465",
+      "id": 2
+    },
+    {
+      "login": "markeltskhadadze",
+      "password": "71dutiba",
+      "id": 3
+    }
+  ]
+}

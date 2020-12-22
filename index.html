@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Final-Project</title>
+</head>
+<body>
+    <div id="signIn" class="modalwin-signIn">
+        <div class="modal-signIn">
+            <span id="close-signIn" class="close-modal">×</span>
+        <h2 class="h2-title">Authorization</h2>
+        <div class="modal-form-signIn">
+            <div>
+                <p>Login</p>
+                <input id="loginValue" type="text" placeholder="John">
+            </div>
+            <div>
+                <p>Password</p>
+                <input id="passValue" type="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="btn-submit-signIn"><button id="submit-aut">Enter</button></div>
+        </div>
+    </div>
+    <div id="thanks-modal" class="thanks-authorization">
+       <div class="thanks-modal-content">
+           <p>Welcome</p>
+       </div>
+    </div>
+    <div id="modalWindow" class="modal">
+        <div class="modal-content">
+            <span id="close" class="close-modal">×</span>
+        <h2 class="h2-title">Register</h2>
+        <div class="modal-form">
+            <div>
+                <p>Login</p>
+                <input class="input-field" id="login" type="text" placeholder="John">
+            </div>
+            <div>
+                <p>Password</p>
+                <input class="input-field" id="pass" type="password" placeholder="Password">
+            </div>
+            <div>
+                <p>Avatar</p>
+                <label for="upload-photo">
+                    <div class="photo"></div>
+                    <input type="file" id="upload-photo" class="upload">
+                </label>
+            </div>
+        </div>
+        <div class="btn-submit"><button id="submit">Register</button></div>
+        </div>
+    </div>
+        <div class="header">
+        <img class="logo" src="img/js-logo.png" alt="">
+            <div>
+                <button id="registration" class="button">Sign Up</button>
+                <button id="authorization" class="button">Sign In</button>
+            </div>
+            </div>
+                <h1 id="hh" class="h1-title">Welcome to Final-Project</h1>
+                <!-- <script src="js/Sign-Up-onclick.js"></script>
+                <script src="js/Sending-data.js"></script>
+                <script src="js/Sign-In-onclick.js"></script>
+                <script src="js/CheckData.js"></script> -->
+                <script src = "./dist/main.js"></script>
+</body>
+</html>
