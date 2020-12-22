@@ -50,7 +50,6 @@ btnSubmit.onclick = async function (event) {
   if (login && pass) {
     var users = await (await fetch("http://localhost:3000/user")).json();
     if (users.some((item) => item.login === login)) {
-      console.log("Bye");
     } else {
       console.log("Hi");
       if (login.length !== 0 && pass.length !== 0) {
