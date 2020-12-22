@@ -68,6 +68,6 @@ btnSubmit.onclick = async function (event) {
       getPassword.value = "";
     }
   } else {
-    console.log("bye");
+    console.log("bye bye");
   }
 };
