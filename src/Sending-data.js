@@ -26,15 +26,21 @@ getAvatar.oninput = (event) => {
 
 getAvatar.onchange = (event) => {
   var img = event.target.files[0];
-  if (img) {
+  var reader = new FileReader();
+
+  getPhoto.title = img.name;
+
+  reader.onload = function(event) {
+    getPhoto.src = event.target.result;
     getPhoto.style = `
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    `
-    getPhoto.src = img
-  }
-};
+     border-radius: 50%;
+     width: 100px;
+     height: 100px;
+     `
+  };
+
+  reader.readAsDataURL(img);
+}
 
 btnSubmit.onclick = async function (event) {
   var login = getLogin.value;
