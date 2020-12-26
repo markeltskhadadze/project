@@ -51,14 +51,6 @@ btnSubmit.onclick = async function (event) {
   var login = getLogin.value;
   var pass = getPassword.value;
   var avatar = getPhoto.src;
-  // if (!login && !pass && !avatar) {
-  //   getLogin.classList.add("input-error");
-  //   enterLogin.classList.add("error-message--visible");
-  //   getPassword.classList.add("input-error");
-  //   enterPassword.classList.add("error-message--visible");
-  //   uploadAvatar.classList.add("error-message--visible");
-  //   return;
-  // }
   if (login && pass && avatar) {
     var users = await (await fetch("http://localhost:3000/user")).json();
     if (users.some((item) => item.login === login)) {
