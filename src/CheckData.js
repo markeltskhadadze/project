@@ -1,9 +1,10 @@
 let getPasswordValue = document.getElementById("passValue");
 let getLoginValue = document.getElementById("loginValue");
 let btnSubmitAut = document.getElementById("submit-aut");
-const clickonSingIp = document.getElementById("authorization");
-const windowSingIp = document.getElementById("signIn");
-const thanksModal = document.getElementById("thanks-modal");
+let clickonSingIp = document.getElementById("authorization");
+let windowSingIp = document.getElementById("signIn");
+let thanksModal = document.getElementById("thanks-modal");
+let authorizationText = document.getElementById('authorizationText')
 let incorrectData = document.getElementById("incorrectData");
 
 getPasswordValue.oninput = (event) => {
@@ -18,9 +19,6 @@ getPasswordValue.oninput = (event) => {
 getLoginValue.oninput = (event) => {
   getLoginValue.classList.remove("input-error");
   incorrectData.classList.remove("error-message--visible");
-  // if (event.target.value.length !== 0) {
-  //   var loginValue = event.target.value;
-  // }
 };
 
 btnSubmitAut.onclick = async function (event) {
@@ -36,8 +34,10 @@ btnSubmitAut.onclick = async function (event) {
     getPasswordValue.value = "";
     windowSingIp.style.display = "none";
     thanksModal.style.display = "flex";
+    authorizationText.style.display = "flex";
     setTimeout(function () {
       thanksModal.style.display = "none";
+      authorizationText.style.display = 'none'
     }, 1000);
   } else {
     getLoginValue.value = "";

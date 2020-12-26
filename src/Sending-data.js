@@ -6,6 +6,11 @@ let enterPassword = document.getElementById("errorPassword");
 let getAvatar = document.getElementById("upload-photo");
 let uploadAvatar = document.getElementById("errorAvatar");
 let getPhoto = document.getElementById("getPhoto");
+let loginExists = document.getElementById("loginExists");
+let registrationText = document.getElementById('RegistrationText')
+let thanksModal = document.getElementById("thanks-modal");
+let windowSingUp = document.getElementById('modalWindow')
+
 
 getPassword.oninput = (event) => {
   getPassword.classList.remove("input-error");
@@ -30,40 +35,51 @@ getAvatar.onchange = (event) => {
 
   getPhoto.title = img.name;
 
-  reader.onload = function(event) {
+  reader.onload = function (event) {
     getPhoto.src = event.target.result;
     getPhoto.style = `
      border-radius: 50%;
      width: 100px;
      height: 100px;
-     `
+     `;
   };
 
   reader.readAsDataURL(img);
-}
+};
 
 btnSubmit.onclick = async function (event) {
   var login = getLogin.value;
   var pass = getPassword.value;
-  if (!login && !pass) {
-    getLogin.classList.add("input-error");
-    enterLogin.classList.add("error-message--visible");
-    getPassword.classList.add("input-error");
-    enterPassword.classList.add("error-message--visible");
-    uploadAvatar.classList.add("error-message--visible");
-    return;
-  }
-  if (login && pass) {
+  var avatar = getPhoto.src;
+  // if (!login && !pass && !avatar) {
+  //   getLogin.classList.add("input-error");
+  //   enterLogin.classList.add("error-message--visible");
+  //   getPassword.classList.add("input-error");
+  //   enterPassword.classList.add("error-message--visible");
+  //   uploadAvatar.classList.add("error-message--visible");
+  //   return;
+  // }
+  if (login && pass && avatar) {
     var users = await (await fetch("http://localhost:3000/user")).json();
     if (users.some((item) => item.login === login)) {
+      getLogin.classList.add("input-error");
+      loginExists.classList.add("error-message--visible");
     } else {
+      windowSingUp.style.display = "none";
+      thanksModal.style.display = "flex";
+      registrationText.style.display = "flex";
+      setTimeout(function () {
+        thanksModal.style.display = "none";
+        registrationText.style.display = 'none'
+      }, 1000);
       console.log("Hi");
-      if (login.length !== 0 && pass.length !== 0) {
+      if (login.length !== 0 && pass.length !== 0 && avatar) {
         fetch("http://localhost:3000/user", {
           method: "POST",
           body: JSON.stringify({
             login: login,
             password: pass,
+            userAvatar: avatar,
           }),
           headers: {
             "Content-type": "application/json",
@@ -72,8 +88,14 @@ btnSubmit.onclick = async function (event) {
       }
       getLogin.value = "";
       getPassword.value = "";
+      getPhoto.src = "";
     }
   } else {
-    console.log("bye");
+    getLogin.classList.add("input-error");
+    enterLogin.classList.add("error-message--visible");
+    getPassword.classList.add("input-error");
+    enterPassword.classList.add("error-message--visible");
+    uploadAvatar.classList.add("error-message--visible");
+    return;
   }
 };

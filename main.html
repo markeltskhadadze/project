@@ -31,7 +31,8 @@
     </div>
     <div id="thanks-modal" class="thanks-authorization">
       <div class="thanks-modal-content">
-        <p>Welcome</p>
+        <p id="authorizationText" style="display: none;">Welcome</p>
+        <p id="RegistrationText" style="display: none;">Thank you for registering</p>
       </div>
     </div>
     <div id="modalWindow" class="modal">
@@ -42,6 +43,7 @@
           <div>
             <p>Login</p>
             <p id="errorLogin" class="error-message">Enter login</p>
+            <p id="loginExists" class="error-message">Login already exists</p>
             <input
               class="input-field"
               id="login"
