@@ -1,8 +1,8 @@
-const clickSingUp = document.getElementById("registration");
-const modalSingUp = document.getElementById("modalWindow");
-const closeModalSingUp = document.getElementById("close");
-// let enterLogin = document.getElementById("errorLogin");
-// let enterPassword = document.getElementById("errorPassword");
+let clickSingUp = document.getElementById("registration");
+let modalSingUp = document.getElementById("modalWindow");
+let closeModalSingUp = document.getElementById("close");
+let getPassword = document.getElementById("pass");
+let getLogin = document.getElementById("login");
 
 registration.onclick = function (event) {
   modalSingUp.style.display = "flex";
@@ -10,8 +10,9 @@ registration.onclick = function (event) {
 
 closeModalSingUp.onclick = function (event) {
   modalSingUp.style.display = "none";
-  // enterLogin.classList.remove("enter-data");
-  // enterPassword.classList.remove("enter-data");
+  getPassword.value = ''
+  getLogin.value = ''
+
 };
 
 window.onclick = function (event) {

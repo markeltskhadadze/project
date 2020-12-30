@@ -31,8 +31,8 @@
     </div>
     <div id="thanks-modal" class="thanks-authorization">
       <div class="thanks-modal-content">
-        <p id="authorizationText" style="display: none;">Welcome</p>
-        <p id="RegistrationText" style="display: none;">Thank you for registering</p>
+        <p id="authorizationText" style="display: none; text-align: center;">Welcome</p>
+        <p id="RegistrationText" style="display: none; text-align: center;">Thank you for registering</p>
       </div>
     </div>
     <div id="modalWindow" class="modal">
@@ -54,6 +54,7 @@
           <div>
             <p>Password</p>
             <p id="errorPassword" class="error-message">Enter password</p>
+            <p id="passwordCharacters" class="error-message">Password must be more than 7 characters</p>
             <input
               class="input-field"
               id="pass"
@@ -66,7 +67,7 @@
             <p id="errorAvatar" class="error-message">Upload Avatar</p>
             <label>
               <div class="photo">
-                <img src="" alt="" id="getPhoto" />
+                <img alt="" id="getPhoto" />
               </div>
               <input type="file" class="upload" id="upload-photo" />
             </label>

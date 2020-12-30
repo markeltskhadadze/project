@@ -9,11 +9,6 @@ let incorrectData = document.getElementById("incorrectData");
 
 getPasswordValue.oninput = (event) => {
   getPasswordValue.classList.remove("input-error");
-  // if (event.target.value.length >= 7) {
-  //   var passValue = event.target.value;
-  // } else {
-  //   alert("Bye");
-  // }
 };
 
 getLoginValue.oninput = (event) => {
@@ -34,11 +29,11 @@ btnSubmitAut.onclick = async function (event) {
     getPasswordValue.value = "";
     windowSingIp.style.display = "none";
     thanksModal.style.display = "flex";
-    authorizationText.style.display = "flex";
+    authorizationText.style.display = "block";
     setTimeout(function () {
       thanksModal.style.display = "none";
       authorizationText.style.display = 'none'
-    }, 1000);
+    }, 1500);
   } else {
     getLoginValue.value = "";
     getPasswordValue.value = "";

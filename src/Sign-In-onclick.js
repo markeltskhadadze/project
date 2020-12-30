@@ -1,6 +1,8 @@
-const clickSingIp = document.getElementById('authorization')
-const modalSingIp = document.getElementById('signIn')
-const closeModalSingIp = document.getElementById('close-signIn')
+let clickSingIp = document.getElementById('authorization')
+let modalSingIp = document.getElementById('signIn')
+let closeModalSingIp = document.getElementById('close-signIn')
+let getPasswordValue = document.getElementById("passValue");
+let getLoginValue = document.getElementById("loginValue");
 
 authorization.onclick = function (event) {
     modalSingIp.style.display = "flex"
@@ -8,6 +10,8 @@ authorization.onclick = function (event) {
 
 closeModalSingIp.onclick = function (event) {
     modalSingIp.style.display = 'none'
+    getPasswordValue.value = ''
+    getLoginValue.value = ''
 }
 
 window.onclick = function (event) {

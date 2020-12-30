@@ -11,21 +11,26 @@ body {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 }
 
 .button {
   background: #e5a228;
   border-radius: 5px;
+  margin-right: 30px;
+  width: 80px;
+  height: 30px;
 }
 
 .h1-title {
   margin-top: 100px;
+  text-align: center;
 }
 
 .h2-title {
   text-align: center;
+  
 }
 
 .modal {
@@ -50,7 +55,7 @@ body {
   background-color: #e5a228;
   border-radius: 10px;
   width: 250px;
-  height: 510px;
+  height: 530px;
 }
 
 @keyframes animate {
@@ -144,9 +149,9 @@ body {
   color: #ffffff;
 }
 
-.btn-submit-signI {
+.btn-submit-signIn {
   text-align: center;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .input-field {
@@ -195,7 +200,7 @@ body {
 }
 
 .thanks-modal-content p {
-  text-align: center;
+  /* text-align: center; */
   margin-top: 40px;
 }
 
